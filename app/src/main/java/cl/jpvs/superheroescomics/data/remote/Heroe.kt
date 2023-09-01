@@ -1,4 +1,7 @@
 package cl.jpvs.superheroescomics.data.remote
+
+import com.google.gson.annotations.SerializedName
+
 /*
 {
 "id": 1,
@@ -24,7 +27,7 @@ data class Heroe(
     val origen : String,
     val imagenLink : String,
     val poder : String,
-    val annoCreacion : Int
+    @SerializedName("Año_creacion") val annoCreacion : Int  //Año_creación no esta de acuerdo con la convención de nomenclatura camelCase
 
 
 )
