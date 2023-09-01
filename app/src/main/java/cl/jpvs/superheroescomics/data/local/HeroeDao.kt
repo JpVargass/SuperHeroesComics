@@ -10,7 +10,7 @@ import androidx.room.Query
 interface HeroeDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun inserAllHeroe(heroeList: List<HeroeEntity>)
+    suspend fun insertAllHeroe(heroeList: List<HeroeEntity>)
 
     @Query("SELECT * FROM heroe_table order by id Asc")
     fun getAllHeroe(): LiveData<List<HeroeEntity>>
